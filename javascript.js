@@ -18,14 +18,14 @@ function playGame(){
     let computerScore = 0;
 
     const gameButtons = document.querySelectorAll(".rps");
-    const result = document.querySelector("#result");
+    const result = document.querySelector("#result-msg");
     const cScore = document.querySelector("#cScore");
     const pScore = document.querySelector("#pScore");
     const restart = document.querySelector(".restart")
     const victory = document.querySelector("#victory")
     const msg = document.querySelector("#msg");
-    const played = document.querySelector("#last-played");
-    
+    const played = document.querySelector("#player .last-played");
+    const compPlayed = document.querySelector("#computer .last-played");
     gameButtons.forEach(button => {
         button.addEventListener('click', () => {
             playRound(button.id);
@@ -39,6 +39,7 @@ function playGame(){
     function playRound(playerHand){
         let compHand = getComputerChoice();
         played.textContent = playerHand == "Rock" ? "🪨" : playerHand == "Paper" ? "📃" : "✂️";  
+        compPlayed.textContent = compHand == "Rock" ? "🪨" : compHand == "Paper" ? "📃" : "✂️";
         if (compHand == playerHand){
             result.textContent = "It's a Tie!";
             console.log("It's a Tie!");
@@ -73,7 +74,7 @@ function playGame(){
         computerScore = 0;
         pScore.textContent = 0;
         cScore.textContent = 0;
-        result.textContent = "Results will be displayed here!";
+        result.textContent = "Pick a hand!";
         victory.style.visibility = 'hidden';
     }
 }

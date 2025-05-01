@@ -1,3 +1,55 @@
+* {
+    box-sizing:border-box;
+    margin:0;
+}
+body {
+    display:flex;
+    flex-direction:column;
+}
+
+#game-container{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    height:100vh;
+
+}
+#players{
+    display:flex;
+    flex-direction:row;
+    height:90vh;
+    width:100%;
+ 
+
+}
+
+#player{
+    background-color: #327fa8;
+    display: flex;
+    flex-direction:column;
+    width:50%;
+    height:90vh;
+    align-items: center;
+    justify-content: center;
+}
+#computer{
+    background-color: #a83a32;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:50%;
+    height:90vh;
+}
+#result {
+    display: flex;
+    background-color:#32a832;
+    height:10vh;
+    width:100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
 #victory {
     position: fixed;
     top: 0;

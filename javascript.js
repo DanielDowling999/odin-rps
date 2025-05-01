@@ -1,13 +1,5 @@
 console.log("Hello World");
 
-
-
-/*psuedocode logic 
-The player will be prompted to play rock, paper or scissors.
-The computer will randomly play rock, paper or scissors
-The winner will be displayed*/
-
-
 function getComputerChoice(){
     //Rock will be 1, paper will be 2, scissors will be 3.
 
@@ -32,6 +24,7 @@ function playGame(){
     const restart = document.querySelector(".restart")
     const victory = document.querySelector("#victory")
     const msg = document.querySelector("#msg");
+    const played = document.querySelector("#last-played");
     
     gameButtons.forEach(button => {
         button.addEventListener('click', () => {
@@ -45,6 +38,7 @@ function playGame(){
 
     function playRound(playerHand){
         let compHand = getComputerChoice();
+        played.textContent = playerHand == "Rock" ? "🪨" : playerHand == "Paper" ? "📃" : "✂️";  
         if (compHand == playerHand){
             result.textContent = "It's a Tie!";
             console.log("It's a Tie!");
@@ -79,7 +73,7 @@ function playGame(){
         computerScore = 0;
         pScore.textContent = 0;
         cScore.textContent = 0;
-        result.textContent = "";
+        result.textContent = "Results will be displayed here!";
         victory.style.visibility = 'hidden';
     }
 }

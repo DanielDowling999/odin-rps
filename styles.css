@@ -1,0 +1,81 @@
+* {
+    box-sizing:border-box;
+    margin:0;
+}
+body {
+    display:flex;
+    flex-direction:column;
+}
+
+#game-container{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    height:100vh;
+    z-index:1;
+}
+#players{
+    display:flex;
+    flex-direction:row;
+    height:85vh;
+    width:100%;
+    font-size:50px;
+}
+
+#player{
+    background-color: #327fa8;
+    display: flex;
+    flex-direction:column;
+    width:50%;
+    height:85vh;
+    align-items: center;
+    justify-content: center;
+}
+.last-played{
+    font-size:200px;
+}
+#computer{
+    background-color: #a83a32;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    width:50%;
+    height:85vh;
+}
+#result {
+    display: flex;
+    background-color:#32a832;
+    height:15vh;
+    width:100%;
+    font-size:30px;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+#victory {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    pointer-events: auto;
+    visibility: hidden;
+}
+
+.rps{
+    width:200px;
+    height:100px;
+    font-size:50px;
+
+}

@@ -5,8 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="javascript.js"></script>
+    <link rel="stylesheet" href = "styles.css">
 </head>
 <body>
+    <div id = "game-container">
+        <div id = "players">
+            <div id = "player">
+                <div id = "pScore">0</div>
+                <div class = "last-played" >
+                    🪨
+                </div>
+            </div>
+        
+            <div id = "computer">
+                <div id = "cScore">0</div>
+                <div class = "last-played">
+                    🪨
+                </div>
+            </div>
+        </div>
+        <div id= "result">
+            <div id="result-msg">
+                Pick a hand!
+            </div>
+            <div id = "handChoice">
+                <button class = "rps" id="Rock">🪨</button>
+                <button class = "rps" id="Paper">📃</button>
+                <button class = "rps" id="Scissors">✂️</button>
+            </div>
+            
+        </div>
+    </div>
+
+    <div id = "victory">
+        <div id = "msg">The Player Wins!</div>
+        <button class = "restart">Play Again?</button>
+    </div>
     
 </body>
 </html>
